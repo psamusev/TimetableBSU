@@ -1,0 +1,15 @@
+{
+    "name": "TimetableBSU",
+    "author": "Anton-Aleksei Ilyin",
+    "description": "Timetable of classes on the faculties of BSU",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "connect": "1.8.x",
+        "express": "3.0.x",
+        "jade": ">= 0.0.1",
+        "mongoose": ">= 2.6.5"
+    },
+    "engine": "0.10.x",
+    "main": "app.js"
+}
