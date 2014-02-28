@@ -19,6 +19,10 @@ app.get('/', function (req, res){
     res.sendfile(__dirname + '/Frontend/index.html');
 });
 
+app.get('/index.html', function (req, res){
+    res.sendfile(__dirname + '/Frontend/index.html');
+});
+
 app.get('*', function (req, res){
     res.sendfile(__dirname + '/Frontend/404.html');
 });
