@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63c25b71-83a2-4253-bd9b-62fd73bc73c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/Bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/Bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/Bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/styles/application.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/Bootstrap/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/Bootstrap/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/Bootstrap/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/Bootstrap/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/Bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/Bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/Bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/Bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/Bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/templates/readme.txt" />
-      <change type="DELETED" beforePath="D:\Own project\TimetableBSU\Application\Frontend\content\readme.txt" afterPath="" />
+    <list default="true" id="63c25b71-83a2-4253-bd9b-62fd73bc73c7" name="Default" comment="added bootstrap files">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-animate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-animate.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-animate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-cookies.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-cookies.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-cookies.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-csp.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-loader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-loader.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-loader.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-mocks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-resource.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-resource.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-route.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-route.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-route.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-sanitize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-sanitize.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-sanitize.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-scenario.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-touch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-touch.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular-touch.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular.js" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular.min.js" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Frontend/index.html" afterPath="$PROJECT_DIR$/Application/Frontend/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Own project\TimetableBSU\Application\Frontend\js\Libs\AngularJS\ui-bootstrap-tpls-0.10.0.min.js" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/ui-bootstrap-tpls.min.js" />
+      <change type="MOVED" beforePath="D:\Own project\TimetableBSU\Application\Frontend\js\Libs\AngularJS\ui-bootstrap-tpls.min.js" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/modules/ui-bootstrap-tpls.min.js" />
     </list>
     <ignored path="TimetableBSU.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,39 +54,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="404.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Frontend/404.html">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Frontend/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="106" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="289">
+            <state line="14" column="8" selection-start="593" selection-end="593" vertical-scroll-proportion="0.4448598" vertical-offset="0" max-vertical-offset="535">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/app.js">
+        <entry file="file://$PROJECT_DIR$/Application/Frontend/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="39" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="629">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ui-bootstrap-tpls.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/ui-bootstrap-tpls.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="18" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+            <state line="6" column="8" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#0#38#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/Frontend/styles/application.css">
+      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Frontend/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+            <state line="1" column="16" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="136">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="374">
               <folding />
             </state>
           </provider>
@@ -90,6 +103,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
     <option name="myDateState">
       <MyDateState />
     </option>
@@ -102,7 +116,11 @@
         <option value="$PROJECT_DIR$/Frontend/404.html" />
         <option value="$PROJECT_DIR$/Server/app.js" />
         <option value="$PROJECT_DIR$/Application/Frontend/404.html" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/Application/Frontend/templates/login.html" />
         <option value="$PROJECT_DIR$/Application/app.js" />
+        <option value="$PROJECT_DIR$/Application/Frontend/js/app.js" />
+        <option value="$PROJECT_DIR$/Application/Frontend/index.html" />
       </list>
     </option>
   </component>
@@ -255,6 +273,88 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimetableBSU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimetableBSU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimetableBSU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimetableBSU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimetableBSU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimetableBSU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -267,6 +367,7 @@
   <component name="PublishConfig" serverName="nodejs" serverId="d9bd1844-6498-4e0c-a355-6d1e7660169a" />
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Own project\TimetableBSU\Application\Frontend\js\Libs\AngularUI\modules" />
       <recent name="D:\Work\Projects\TimetableBSU\TimetableBSU\Server" />
     </key>
   </component>
@@ -316,27 +417,32 @@
       <created>1393429043067</created>
       <updated>1393429043067</updated>
     </task>
+    <task id="LOCAL-00001" summary="added bootstrap files">
+      <created>1393676074451</created>
+      <updated>1393676074451</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70187396" sideWeight="0.4996277" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24944155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24944155" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5003723" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -349,6 +455,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="added bootstrap files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added bootstrap files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -368,32 +476,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="39" selection-start="959" selection-end="959" vertical-scroll-proportion="-0.5839416" vertical-offset="626" max-vertical-offset="7548">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/modules/ui-bootstrap-tpls.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="59" selection-start="32203" selection-end="32203" vertical-scroll-proportion="0.24817519" vertical-offset="0" max-vertical-offset="548">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Frontend/404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="106" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="289">
+        <state line="8" column="106" selection-start="229" selection-end="229" vertical-scroll-proportion="0.2542056" vertical-offset="0" max-vertical-offset="535">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="39" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Frontend/js/Libs/AngularJS/ui-bootstrap-tpls.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Frontend/styles/application.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Frontend/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="16" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Frontend/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="8" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Frontend/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="8" selection-start="593" selection-end="593" vertical-scroll-proportion="0.4448598" vertical-offset="0" max-vertical-offset="535">
           <folding />
         </state>
       </provider>
