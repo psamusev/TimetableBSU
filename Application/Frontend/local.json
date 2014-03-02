@@ -1,0 +1,12 @@
+{
+    "d":{
+        "en-us":{
+            "firstName":"Login page",
+            "secondName": "Content page"
+        },
+        "ru-ru":{
+            "firstName":"Страница для входа",
+            "secondName": "Страница с информацией"
+        }
+    }
+}

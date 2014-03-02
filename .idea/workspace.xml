@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63c25b71-83a2-4253-bd9b-62fd73bc73c7" name="Default" comment="added bootstrap files">
-      <change type="DELETED" beforePath="D:\Own project\TimetableBSU\Application\Frontend\images\readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\Own project\TimetableBSU\Application\Frontend\js\readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\Own project\TimetableBSU\Application\Frontend\styles\readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\Own project\TimetableBSU\Application\Frontend\templates\readme.txt" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/local.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/templates/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/modules/ui-bootstrap-tpls.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Frontend/index.html" afterPath="$PROJECT_DIR$/Application/Frontend/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Frontend/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="31" selection-start="660" selection-end="660" vertical-scroll-proportion="0.3813084" vertical-offset="0" max-vertical-offset="535">
+            <state line="13" column="20" selection-start="711" selection-end="711" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="561">
               <folding />
             </state>
           </provider>
@@ -42,11 +42,17 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Frontend/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="18" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-              <folding>
-                <marker date="1393761712684" expanded="true" signature="726:1027" placeholder="[...]" />
-                <marker date="1393761712684" expanded="true" signature="871:1010" placeholder="{...}" />
-              </folding>
+            <state line="12" column="57" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="1394">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="local.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Frontend/local.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="1" selection-start="252" selection-end="252" vertical-scroll-proportion="0.34953272" vertical-offset="0" max-vertical-offset="535">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,7 +60,7 @@
       <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Frontend/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="16" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="136">
+            <state line="2" column="9" selection-start="28" selection-end="28" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
@@ -94,10 +100,11 @@
         <option value="$PROJECT_DIR$/Server/app.js" />
         <option value="$PROJECT_DIR$/Application/Frontend/404.html" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/Application/Frontend/templates/login.html" />
         <option value="$PROJECT_DIR$/Application/app.js" />
-        <option value="$PROJECT_DIR$/Application/Frontend/js/app.js" />
         <option value="$PROJECT_DIR$/Application/Frontend/index.html" />
+        <option value="$PROJECT_DIR$/Application/Frontend/js/app.js" />
+        <option value="$PROJECT_DIR$/Application/Frontend/templates/login.html" />
+        <option value="$PROJECT_DIR$/Application/Frontend/local.json" />
       </list>
     </option>
   </component>
@@ -106,6 +113,28 @@
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>JSValidateJSON</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -324,7 +353,11 @@
       <created>1393762272348</created>
       <updated>1393762272348</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="remove unusable readme files">
+      <created>1393762538023</created>
+      <updated>1393762538023</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -361,22 +394,13 @@
     <MESSAGE value="added bootstrap files" />
     <MESSAGE value="added all libs for angularJS" />
     <MESSAGE value="added angular ui.router" />
-    <option name="LAST_COMMIT_MESSAGE" value="added angular ui.router" />
+    <MESSAGE value="remove unusable readme files" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove unusable readme files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/Frontend/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="8" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204">
-          <folding>
-            <marker date="1393761712684" expanded="true" signature="726:1027" placeholder="[...]" />
-            <marker date="1393761712684" expanded="true" signature="871:1010" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Frontend/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="16" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="136">
@@ -410,15 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/modules/ui-bootstrap-tpls.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="59" selection-start="32203" selection-end="32203" vertical-scroll-proportion="0.24817519" vertical-offset="0" max-vertical-offset="548">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Frontend/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="106" selection-start="229" selection-end="229" vertical-scroll-proportion="0.2542056" vertical-offset="0" max-vertical-offset="535" />
@@ -438,36 +453,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Frontend/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="136">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.030303031" vertical-offset="34" max-vertical-offset="629">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/modules/angular-ui-router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="45254">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Frontend/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <folding>
-            <marker date="1393761712684" expanded="true" signature="726:1027" placeholder="[...]" />
-            <marker date="1393761712684" expanded="true" signature="871:1010" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -478,9 +467,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/modules/angular-ui-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="45169">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Frontend/js/Libs/AngularUI/modules/ui-bootstrap-tpls.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="28" selection-start="138" selection-end="150" vertical-scroll-proportion="0.031021899" vertical-offset="0" max-vertical-offset="548">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Frontend/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="660" selection-end="660" vertical-scroll-proportion="0.3813084" vertical-offset="0" max-vertical-offset="535">
+        <state line="13" column="20" selection-start="711" selection-end="711" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Frontend/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="9" selection-start="28" selection-end="28" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Frontend/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="57" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="1394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Frontend/local.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="1" selection-start="252" selection-end="252" vertical-scroll-proportion="0.34953272" vertical-offset="0" max-vertical-offset="535">
           <folding />
         </state>
       </provider>
