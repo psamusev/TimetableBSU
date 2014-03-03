@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="timetableBSU">
+<html ng-app="timetableBSU">
     <head>
         <title>Timetable BSU</title>
-        <link rel="stylesheet" href="js/Libs/AngularUI/Bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="js/Libs/AngularUI/Bootstrap/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="styles/application.css">
-        <script src="js/Libs/AngularJS/angular.min.js"></script>
-        <script src="js/Libs/AngularUI/modules/angular-ui-router.min.js"></script>
-        <script src="js/Libs/AngularUI/modules/ui-bootstrap-tpls.min.js"></script>
-        <script src="js/app.js"></script>
+        <link rel="stylesheet" href="../Frontend/js/Libs/AngularUI/Bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../Frontend/js/Libs/AngularUI/Bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../Frontend/styles/application.css">
+        <script src="../Frontend/js/Libs/AngularJS/angular.min.js"></script>
+        <script src="../Frontend/js/Libs/AngularUI/modules/angular-ui-router.min.js"></script>
+        <script src="../Frontend/js/Libs/AngularUI/modules/ui-bootstrap-tpls.min.js"></script>
+        <script src="../Frontend/js/app.js"></script>
+        <script src="../Frontend/js/modules/services/MainService.js"></script>
+        <script src="../Frontend/js/modules/controllers/LoginController.js"></script>
+        <script src="../Frontend/js/modules/controllers/TimeTableController.js"></script>
+        <script src="../Frontend/js/modules/services/LoginService.js"></script>
     </head>
-<body ng-controller="TestCtrl" ng-show="ready === true">
-    <p>{{title}}</p>
+<body ng-controller="TimeTableCtrl" ng-show="ready===true">
+    <p>{{translation.title}}</p>
     <div class="btn-group">
-        <button class="btn btn-primary" ng-click="doClick(1)">{{firstName}}</button>
-        <button class="btn btn-info" ng-click="doClick(2)">{{secondName}}</button>
+        <button class="btn btn-primary" ng-click="doClick(1)">{{translation.firstName}}</button>
+        <button class="btn btn-info" ng-click="doClick(2)">{{translation.secondName}}</button>
     </div>
     <div class="btn-group">
-        <button class="btn btn-info" ng-click="changeLocale('en-us')" ng-model="radioModel" btn-radio="'en'">en</button>
-        <button class="btn btn-info" ng-click="changeLocale('ru-ru')" ng-model="radioModel" btn-radio="'ru'">ru</button>
+        <button class="btn btn-info" ng-click="changeLocale('en-us')" ng-model="radioModel" btn-radio="'en-us'">en</button>
+        <button class="btn btn-info" ng-click="changeLocale('ru-ru')" ng-model="radioModel" btn-radio="'ru-ru'">ru</button>
     </div>
     <div ui-view></div>    <!--<h1>You are welcome!</h1>-->
     <!--<p>-->

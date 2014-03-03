@@ -23,6 +23,11 @@ app.get('/index.html', function (req, res){
     res.sendfile(__dirname + '/Frontend/index.html');
 });
 
+app.get('/Frontend/*', function (req, res){
+   res.writeHead(200, {'Context-Type': 'text/html'});
+   res.end();
+});
+
 app.get('*', function (req, res){
     res.sendfile(__dirname + '/Frontend/404.html');
 });

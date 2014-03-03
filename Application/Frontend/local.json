@@ -1,12 +1,22 @@
 {
     "d":{
         "en-us":{
+            "title":"Header Title",
             "firstName":"Login page",
-            "secondName": "Content page"
+            "secondName": "Content page",
+            "LoginTitle":"Log in",
+            "LoginLabel":"Login",
+            "PasswordLabel":"Password",
+            "submitButtonTitle":"Enter"
         },
         "ru-ru":{
+            "title":"Главный заголовок",
             "firstName":"Страница для входа",
-            "secondName": "Страница с информацией"
+            "secondName": "Страница с информацией",
+            "LoginTitle":"Вход",
+            "LoginLabel":"Логин",
+            "PasswordLabel":"Пароль",
+            "submitButtonTitle":"Войти"
         }
     }
 }
