@@ -2,36 +2,52 @@
  * Created by Pavel on 3.3.14.
  */
 angular.module('TimeTable.MainService')
-    .service('TranslationService',[
+    .service('translation',[
         '$locale',
         'getJson',
-        function($locale,local){
+        'locStorage',
+        function($locale,local,storage){
             var me = this;
 
             this.create = function(){
                 local.getLocal().then(function(loc){
-                    me.data = loc;
+                    me.data = loc.d;
                 });
-            }
+            };
             this.setTranslation = function($scope){
-                $scope.translation = me.data[localStorage.getItem('local')];
-            }
+                $scope.translation = me.data[storage.get('local')];
+            };
+            /*this.getTranslation = function(){
+                return (me.data)? me.data[storage.get('local')] : null;
+            };*/
 
-        }])
+        }
+    ])
     .factory('getJson',[
-        '$q',
         '$http',
-        function($q,$http){
+        function($http){
             var path = '../Frontend/local.json';
             return{
                 getLocal: function(){
-                    var def = $q.defer();
-                    $http.get(path).success(function(responce){
-                        def.resolve(responce.d);
-                    }).error(function(){
-                            def.resolve(false)
-                        });
-                    return def.promise;
+                    return $http.get(path).then(function (response) {
+                        return response.data;
+                    });
                 }
             }
-    }]);
+        }
+    ])
+    .factory('locStorage',
+        function(){
+            var storage = window.localStorage;
+            return{
+                set:function(key,value){
+                    storage.setItem(key,value);
+                },
+                get:function(key){
+                    return storage.getItem(key);
+                },
+                has:function(key){
+                    return(storage.getItem(key)) ? true : false;
+                }
+            }
+    });

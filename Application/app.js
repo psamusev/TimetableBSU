@@ -29,7 +29,7 @@ app.get('/Frontend/*', function (req, res){
 });
 
 app.get('*', function (req, res){
-    res.sendfile(__dirname + '/Frontend/404.html');
+    res.sendfile(__dirname + '/Frontend/templates/404.html');
 });
 
 app.listen(8000);

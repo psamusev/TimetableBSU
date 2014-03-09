@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html ng-app="timetableBSU">
     <head>
+        <!--<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">-->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!--<meta name="mobile-web-app-capable" content="yes"/>-->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
         <title>Timetable BSU</title>
-        <link rel="stylesheet" href="../Frontend/js/Libs/AngularUI/Bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../Frontend/js/Libs/AngularUI/Bootstrap/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../Frontend/styles/application.css">
+        <!--<link rel="stylesheet" href="../Frontend/js/Libs/AngularUI/Bootstrap/css/bootstrap-theme.min.css">-->
+        <!--<link rel="stylesheet" href="../Frontend/styles/application.css">-->
+        <script src="../Frontend/js/index.js"></script>
+
         <script src="../Frontend/js/Libs/AngularJS/angular.min.js"></script>
+        <script>
+            app.initialize();
+        </script>
         <script src="../Frontend/js/Libs/AngularUI/modules/angular-ui-router.min.js"></script>
+        <script src="../Frontend/js/Libs/AngularJS/angular-route.min.js"></script>
         <script src="../Frontend/js/Libs/AngularUI/modules/ui-bootstrap-tpls.min.js"></script>
         <script src="../Frontend/js/app.js"></script>
         <script src="../Frontend/js/modules/services/MainService.js"></script>
         <script src="../Frontend/js/modules/controllers/LoginController.js"></script>
+        <script src="../Frontend/js/modules/controllers/ContentController.js"></script>
+        <script src="../Frontend/js/modules/controllers/FirstCourseController.js"></script>
+        <script src="../Frontend/js/modules/controllers/SecondCourseController.js"></script>
         <script src="../Frontend/js/modules/controllers/TimeTableController.js"></script>
         <script src="../Frontend/js/modules/services/LoginService.js"></script>
     </head>
@@ -18,15 +32,12 @@
     <p>{{translation.title}}</p>
     <div class="btn-group">
         <button class="btn btn-primary" ng-click="doClick(1)">{{translation.firstName}}</button>
-        <button class="btn btn-info" ng-click="doClick(2)">{{translation.secondName}}</button>
+        <button class="btn btn-primary" ng-click="doClick(2)">{{translation.secondName}}</button>
     </div>
     <div class="btn-group">
-        <button class="btn btn-info" ng-click="changeLocale('en-us')" ng-model="radioModel" btn-radio="'en-us'">en</button>
-        <button class="btn btn-info" ng-click="changeLocale('ru-ru')" ng-model="radioModel" btn-radio="'ru-ru'">ru</button>
+        <button class="btn btn-primary" ng-click="changeLocale('en-us')" ng-model="radioModel" btn-radio="'en-us'">en</button>
+        <button class="btn btn-primary" ng-click="changeLocale('ru-ru')" ng-model="radioModel" btn-radio="'ru-ru'">ru</button>
     </div>
-    <div ui-view></div>    <!--<h1>You are welcome!</h1>-->
-    <!--<p>-->
-        <!--Hello, user! This first version of Timetable BSU.-->
-    <!--</p>-->
+    <div ui-view></div>
 </body>
 </html>

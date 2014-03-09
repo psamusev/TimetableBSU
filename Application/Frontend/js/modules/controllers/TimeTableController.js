@@ -6,27 +6,35 @@ angular.module('timetableBSU')
         '$scope',
         '$timeout',
         '$state',
-        'TranslationService',
-        function($scope,$timeout,$state,loc){
-            loc.create();
+        'translation',
+        'locStorage',
+        function($scope,$timeout,$state,translation,storage){
             $scope.title = 'My title';
-            $timeout(function(){
+            //Can we use cache
+            /*if(loc.getTranslation()){
                 loc.setTranslation($scope);
                 $scope.ready = true;
                 $state.transitionTo('login',{},{});
-            },100);
+                console.log('cash');
+            } else{*/
+                $timeout(function(){
+                    translation.setTranslation($scope);
+                    $scope.ready = true;
+                    $state.transitionTo('login',{},{});
+                },500);
+            //}
             $scope.doClick = function(data){
                 switch (data){
                     case 1: $state.transitionTo('login',{},{}); break;
-                    case 2: $state.transitionTo('content',{},{}); break;
+                    case 2: $state.transitionTo('1course',{},{}); break;
                 }
             };
 
             $scope.changeLocale = function(lang){
-                localStorage.setItem('local',lang);
-                loc.setTranslation($scope);
-                $state.transitionTo($state.current.name,{},{reload:true})
-            }
+                storage.set('local',lang);
+                translation.setTranslation($scope);
+                $state.transitionTo($state.current.name,{},{reload:true,location:'replace'})
+            };
 
-            $scope.radioModel = localStorage.getItem('local');
+            $scope.radioModel = storage.get('local');
     }]);

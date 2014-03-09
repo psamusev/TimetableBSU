@@ -1,0 +1,11 @@
+$primary-color: rgb(57,192,230);
+$background-color:white;
+$btn-primary-bg:rgb(57,110,230);
+@import "bootstrap-sass/lib/bootstrap";
+body{
+  background: $primary-color;
+}
+
+.login-form{
+  background-color: $background-color;
+}

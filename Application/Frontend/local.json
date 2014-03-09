@@ -7,7 +7,12 @@
             "LoginTitle":"Log in",
             "LoginLabel":"Login",
             "PasswordLabel":"Password",
-            "submitButtonTitle":"Enter"
+            "submitButtonTitle":"Enter",
+            "contentText":"Content text",
+            "firstCourse":"The 1th course",
+            "secondCourse":"The 2th course",
+            "test1":"Test 1 course",
+            "test2":"Test 2 course"
         },
         "ru-ru":{
             "title":"Главный заголовок",
@@ -16,7 +21,12 @@
             "LoginTitle":"Вход",
             "LoginLabel":"Логин",
             "PasswordLabel":"Пароль",
-            "submitButtonTitle":"Войти"
+            "submitButtonTitle":"Войти",
+            "contentText":"Текст контента",
+            "firstCourse":"Первый курс",
+            "secondCourse":"Второй курс",
+            "test1":"Тест 1-го курса",
+            "test2":"Тест 2-го курса"
         }
     }
 }

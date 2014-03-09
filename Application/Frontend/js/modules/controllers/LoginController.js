@@ -5,7 +5,7 @@ angular.module("TimeTable.Login")
     .controller('LoginCtrl',[
         '$scope',
         '$state',
-        'TranslationService',
+        'translation',
         function($scope,$state,loc){
             loc.setTranslation($scope);
 
