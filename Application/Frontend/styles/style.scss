@@ -1,11 +1,65 @@
-$primary-color: rgb(57,192,230);
+$primary-color: rgb(0,255,204);
 $background-color:white;
-$btn-primary-bg:rgb(57,110,230);
+$btn-primary-bg:rgb(0,204,153);
+$btn-primary-color:white;
+$modal-title-padding:2px;
+$icon-font-path: '../styles/bootstrap-sass/fonts/';
+
 @import "bootstrap-sass/lib/bootstrap";
+
 body{
   background: $primary-color;
 }
 
 .login-form{
-  background-color: $background-color;
+  background-color: $primary-color;
+  padding-top: 100px;
+  .inner-container{
+    width: 460px;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: $background-color;
+    margin: 0 auto;
+    border-radius: $border-radius-large;
+    .inner-login-form{
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      .merged .input-group-addon {
+        border-right: 0px;
+        background-color: #FFFFFF;
+      }
+      .merged input {
+        border-left: 0px;
+        background-color: #FFFFFF;
+      }
+    }
+    .btn-primary{
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
 }
+
+.modal-header{
+  background-color: $btn-primary-bg;
+  color: $btn-primary-color;
+}
+
+.registration{
+  overflow-y: auto;
+}
+
+.forgot-password{
+  @extend .registration;
+  .modal-dialog{
+    width: 500px;
+  }
+}
+
+//.selection{
+//  .form-group{
+//    width: 15%;
+//  }
+//}

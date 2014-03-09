@@ -1,0 +1,64 @@
+<div class="modal-header">
+    {{translation.registration}}
+</div>
+<div class="modal-body">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">{{translation.nameLabel}}</label>
+            <div class="col-sm-10">
+                <input class="form-control" ng-model="name" type="text" placeholder="{{translation.nameLabel}}"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">{{translation.surnameLabel}}</label>
+            <div class="col-sm-10">
+                <input class="form-control" ng-model="surname" type="text" placeholder="{{translation.surnameLabel}}"/>
+            </div>
+        </div>
+        <div class="selection">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">{{translation.facultyLabel}}</label>
+                <div class="col-sm-10">
+                    <select class="form-control" ng-model="faculty">
+                        <option>fpm</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">{{translation.groupLabel}}</label>
+                <div class="col-sm-10">
+                    <select class="form-control" ng-model="group" ng-options="g for g in groups">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">{{translation.loginLabel}}</label>
+            <div class="col-sm-10">
+                <input class="form-control" ng-model="username" type="text" ng-disabled="true" placeholder="{{translation.loginLabel}}"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">{{translation.passwordLabel}}</label>
+            <div class="col-sm-10">
+                <input class="form-control" ng-model="password" type="password" placeholder="{{translation.passwordLabel}}"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" style="padding-top:0px;">{{translation.confirmPassword}}</label>
+            <div class="col-sm-10">
+                <input class="form-control" ng-model="confirmPassword" type="password" placeholder="{{translation.confirmPassword}}"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">{{translation.emailLabel}}</label>
+            <div class="col-sm-10">
+                <input class="form-control" ng-model="username" type="text" placeholder="{{translation.emailLabel}}"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">{{translation.registration}}</button>
+    <button class="btn btn-warning" ng-click="cancel()">{{translation.cancel}}</button>
+</div>

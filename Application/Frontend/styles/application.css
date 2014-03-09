@@ -1398,24 +1398,24 @@ textarea.input-lg {
     border-color: #ccc; }
 
 .btn-primary {
-  color: #fff;
-  background-color: #396ee6;
-  border-color: #225fe3; }
+  color: white;
+  background-color: #00cc99;
+  border-color: #00b386; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-    color: #fff;
-    background-color: #1c58db;
-    border-color: #164ab2; }
+    color: white;
+    background-color: #00a37a;
+    border-color: #007558; }
   .open .btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: #1c58db;
-    border-color: #164ab2; }
+    color: white;
+    background-color: #00a37a;
+    border-color: #007558; }
   .btn-primary:active, .btn-primary.active {
     background-image: none; }
   .open .btn-primary.dropdown-toggle {
     background-image: none; }
   .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
-    background-color: #396ee6;
-    border-color: #225fe3; }
+    background-color: #00cc99;
+    border-color: #00b386; }
 
 .btn-warning {
   color: #fff;
@@ -1564,8 +1564,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg'); }
+  src: url('../styles/bootstrap-sass/fonts/glyphicons-halflings-regular.eot');
+  src: url('../styles/bootstrap-sass/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../styles/bootstrap-sass/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../styles/bootstrap-sass/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../styles/bootstrap-sass/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg'); }
 
 .glyphicon {
   position: relative;
@@ -3691,9 +3691,9 @@ button.close {
     filter: alpha(opacity=50); }
 
 .modal-header {
-  padding: 15px;
+  padding: 2px;
   border-bottom: 1px solid #e5e5e5;
-  min-height: 16.42857px; }
+  min-height: 3.42857px; }
 
 .modal-header .close {
   margin-top: -2px; }
@@ -4371,7 +4371,39 @@ th.hidden-lg, td.hidden-lg {
     display: none !important; } }
 
 body {
-  background: #39c0e6; }
+  background: #00ffcc; }
 
 .login-form {
-  background-color: white; }
+  background-color: #00ffcc;
+  padding-top: 100px; }
+  .login-form .inner-container {
+    width: 460px;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 6px; }
+    .login-form .inner-container .inner-login-form {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto; }
+      .login-form .inner-container .inner-login-form .merged .input-group-addon {
+        border-right: 0px;
+        background-color: #FFFFFF; }
+      .login-form .inner-container .inner-login-form .merged input {
+        border-left: 0px;
+        background-color: #FFFFFF; }
+    .login-form .inner-container .btn-primary {
+      margin-top: 20px;
+      width: 100%; }
+
+.modal-header {
+  background-color: #00cc99;
+  color: white; }
+
+.registration, .forgot-password {
+  overflow-y: auto; }
+
+.forgot-password .modal-dialog {
+  width: 500px; }

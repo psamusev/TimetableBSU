@@ -17,7 +17,7 @@ angular.module('timetableBSU',[
         '$urlRouterProvider',
         '$locationProvider',
         '$routeProvider',
-        function($stateProvider,$urlRouterProvider,$locationProvider,$routeProvider){
+        function($stateProvider,$urlRouterProvider){
 
             $stateProvider
                 .state({
@@ -61,15 +61,15 @@ angular.module('timetableBSU',[
         '$rootScope',
         '$urlRouter',
         '$location',
-        '$window',
-        function(storage,loc,$rootScope,$urlRouter,$location,$window){
+        'loginService',
+        function(storage,loc,$rootScope,$urlRouter,$location,loginService){
              loc.create();
              if(!storage.has('local')){
                 storage.set('local','en-us');
              }
             $rootScope.$on('$locationChangeSuccess', function(evt) {
                 evt.preventDefault();
-                if($location.path().indexOf('content') >= 0){
+                if($location.path().indexOf('content') >= 0 && !loginService.isAuthorized()){
                     alert('You are not authorized');
                     $location.path('/login').replace();
                 }
@@ -77,7 +77,7 @@ angular.module('timetableBSU',[
         });
 
     }]);
-angular.module('TimeTable.Login',['TimeTable.MainService']);
+angular.module('TimeTable.Login',['TimeTable.MainService','ui.bootstrap']);
 angular.module('TimeTable.MainService',[]);
 angular.module('TimeTable.Content',[
         'TimeTable.MainService',
