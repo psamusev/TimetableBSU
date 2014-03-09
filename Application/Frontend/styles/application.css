@@ -4402,8 +4402,11 @@ body {
   background-color: #00cc99;
   color: white; }
 
-.registration, .forgot-password {
+.overflow, .registration, .forgot-password {
   overflow-y: auto; }
+
+.registration .modal-dialog {
+  width: 768px; }
 
 .forgot-password .modal-dialog {
   width: 500px; }

@@ -47,12 +47,19 @@ body{
   color: $btn-primary-color;
 }
 
-.registration{
+.overflow{
   overflow-y: auto;
 }
 
+.registration{
+  @extend .overflow;
+  .modal-dialog{
+    width: 768px;
+  }
+}
+
 .forgot-password{
-  @extend .registration;
+  @extend .overflow;
   .modal-dialog{
     width: 500px;
   }
