@@ -1399,23 +1399,23 @@ textarea.input-lg {
 
 .btn-primary {
   color: white;
-  background-color: #00cc99;
-  border-color: #00b386; }
+  background-color: #00ccff;
+  border-color: #00b8e6; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
     color: white;
-    background-color: #00a37a;
-    border-color: #007558; }
+    background-color: #00abd6;
+    border-color: #0087a8; }
   .open .btn-primary.dropdown-toggle {
     color: white;
-    background-color: #00a37a;
-    border-color: #007558; }
+    background-color: #00abd6;
+    border-color: #0087a8; }
   .btn-primary:active, .btn-primary.active {
     background-image: none; }
   .open .btn-primary.dropdown-toggle {
     background-image: none; }
   .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
-    background-color: #00cc99;
-    border-color: #00b386; }
+    background-color: #00ccff;
+    border-color: #00b8e6; }
 
 .btn-warning {
   color: #fff;
@@ -4371,10 +4371,10 @@ th.hidden-lg, td.hidden-lg {
     display: none !important; } }
 
 body {
-  background: #00ffcc; }
+  background: #0099ff; }
 
 .login-form {
-  background-color: #00ffcc;
+  background-color: #0099ff;
   padding-top: 100px; }
   .login-form .inner-container {
     width: 460px;
@@ -4399,14 +4399,28 @@ body {
       width: 100%; }
 
 .modal-header {
-  background-color: #00cc99;
+  background-color: #00ccff;
   color: white; }
 
 .overflow, .registration, .forgot-password {
   overflow-y: auto; }
 
+.has-error .control-label {
+  color: red; }
+.has-error .form-control {
+  border-color: red; }
+
 .registration .modal-dialog {
-  width: 768px; }
+  width: 500px; }
+.registration .modal-body {
+  padding-bottom: 0; }
+  .registration .modal-body .form-group .control-label {
+    margin-right: 20px;
+    text-align: left; }
+.registration .modal-footer {
+  padding: 7px 20px 7px; }
 
 .forgot-password .modal-dialog {
   width: 500px; }
+.forgot-password .modal-footer {
+  padding: 7px 20px 7px; }

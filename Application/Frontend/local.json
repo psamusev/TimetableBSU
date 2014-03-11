@@ -23,7 +23,8 @@
             "facultyLabel":"Faculty",
             "groupLabel":"Group",
             "confirmPassword":"Confirm password",
-            "emailLabel":"Email"
+            "emailLabel":"Email",
+            "registrationError":"Fields marked in red must be filled"
         },
         "ru-ru":{
             "title":"Главный заголовок",
@@ -48,7 +49,8 @@
             "facultyLabel":"Факультет",
             "groupLabel":"Группа",
             "confirmPassword":"Подтвердите пароль",
-            "emailLabel":"Е-мейл"
+            "emailLabel":"Емейл",
+            "registrationError":"Поля,помеченные красным, обязательны к заполнению"
         }
     }
 }

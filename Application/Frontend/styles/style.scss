@@ -1,10 +1,11 @@
-$primary-color: rgb(0,255,204);
+$primary-color: rgb(0,153,255);//rgb(0,255,204);
 $background-color:white;
-$btn-primary-bg:rgb(0,204,153);
+$btn-primary-bg:rgb(0,204,255); //rgb(0,204,153);
 $btn-primary-color:white;
 $modal-title-padding:2px;
+$modal-footer-padding: 7px 20px 7px;
+$input-has-error: red;
 $icon-font-path: '../styles/bootstrap-sass/fonts/';
-
 @import "bootstrap-sass/lib/bootstrap";
 
 body{
@@ -51,11 +52,35 @@ body{
   overflow-y: auto;
 }
 
+.has-error{
+  .control-label{
+    color: $input-has-error;
+  }
+  .form-control{
+    border-color: $input-has-error;
+  }
+}
+
 .registration{
   @extend .overflow;
   .modal-dialog{
-    width: 768px;
+    width: 500px;
   }
+  .modal-body{
+    padding-bottom: 0;
+    .form-group{
+      .control-label{
+        margin-right: 20px;
+        text-align: left;
+      }
+    }
+  }
+  .modal-footer{
+    padding: $modal-footer-padding;
+  }
+
+
+
 }
 
 .forgot-password{
@@ -63,10 +88,19 @@ body{
   .modal-dialog{
     width: 500px;
   }
+  .modal-footer{
+    padding: $modal-footer-padding;
+  }
 }
-
+//
 //.selection{
-//  .form-group{
-//    width: 15%;
+//  margin-left: 47px;
+//  .form-group label{
+//    position: absolute;
+//    padding-top: 5px;
+//  }
+//  .form-control{
+//    width: 150px;
+//    margin-left: 90px;
 //  }
 //}
