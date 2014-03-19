@@ -2,10 +2,31 @@
  * Created by Pavel on 3.3.14.
  */
 angular.module("TimeTable.Login")
-    .factory('loginService',['locStorage',function(locStore){
+    .factory('loginService',['locStorage','$http','$q',function(locStore,$http,$q){
         return{
-            login:function(){
-                locStore.set('auth','user:password');
+            login:function(credentials){
+
+                var deffer = $q.defer();
+
+                $http({
+                    url:'/login/authentication',
+                    method:'POST',
+                    params:{
+                        username:credentials.username,
+                        password:credentials.password
+                    }
+                }).success(function(response){
+                        alert('It is working!!!!!!');
+                        deffer.resolve(true);
+                    }).error(function(response){
+                        deffer.reject({
+                            message:response
+                        });
+                    });
+
+                return deffer.promise;
+//                locStore.set('auth','user:password');
+//                return true;
             },
             logout:function(){
                 locStore.remove('auth');

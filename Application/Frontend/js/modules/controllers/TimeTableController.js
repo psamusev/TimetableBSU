@@ -5,12 +5,12 @@ angular.module('timetableBSU')
     .controller("TimeTableCtrl",[
         '$scope',
         '$timeout',
-        '$state',
+        'navigation',
         'translation',
         'locStorage',
         'loginService',
         '$modal',
-        function($scope,$timeout,$state,translation,storage,loginService,$modal){
+        function($scope,$timeout,navigation,translation,storage,loginService,$modal){
             $scope.title = 'My title';
             $scope.registration = true;
             //Can we use cache
@@ -20,18 +20,24 @@ angular.module('timetableBSU')
                 $state.transitionTo('login',{},{});
                 console.log('cash');
             } else{*/
-                $timeout(function(){
-                    translation.setTranslation($scope);
-                    $scope.ready = true;
-                    $state.transitionTo('login',{},{});
-                },500);
+            translation.create().then(function(data){
+                translation.set(data.d);
+                translation.setTranslation($scope);
+                $scope.ready = true;
+                if(loginService.isAuthorized()){
+                    //navigation.stateNavigationTo('1course',{},{location:'replace'});
+                } else{
+                    navigation.stateNavigationTo('login',{},{});
+                }
+            });
+
             //}
             $scope.doClick = function(data){
                 switch (data){
-                    case 1: $scope.registration = true; $state.transitionTo('login',{},{}); break;
+                    case 1: $scope.registration = true; navigation.stateNavigationTo('login',{},{}); break;
                     case 2: if(loginService.isAuthorized()){
                                 $scope.registration = false;
-                                $state.transitionTo('1course',{},{});
+                                navigation.stateNavigationTo('1course',{},{});
                             } else {
                                 alert('You are not authorized');
                             } break;
@@ -41,7 +47,7 @@ angular.module('timetableBSU')
             $scope.changeLocale = function(lang){
                 storage.set('local',lang);
                 translation.setTranslation($scope);
-                $state.transitionTo($state.current.name,{},{reload:true,location:'replace'})
+                navigation.reloadState();
             };
 
             $scope.doRegistration = function(){
@@ -60,7 +66,7 @@ angular.module('timetableBSU')
                         $scope.ok = function(){
 
                             var newUser = {
-                                name:this.name,
+                                name: this.name,
                                 surname: this.surname,
                                 faculty: this.faculty,
                                 group: this.group,

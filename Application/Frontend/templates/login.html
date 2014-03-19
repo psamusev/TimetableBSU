@@ -19,7 +19,7 @@
                 <span style="vertical-align: top"><input type="checkbox" ng-model="rememberCred">  {{translation.rememberMe}}</span>
                 <span class="pull-right"><a href="" ng-click="doForgotPassword();">{{translation.forgotPassword}}</a></span>
             </div>
-            <button class="btn btn-primary" type="submit">{{translation.submitButtonTitle}}</button>
+            <button class="btn btn-primary" ng-click="doLogin();">{{translation.submitButtonTitle}}</button>
         </div>
     </div>
 </div>

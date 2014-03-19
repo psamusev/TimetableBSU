@@ -1399,23 +1399,23 @@ textarea.input-lg {
 
 .btn-primary {
   color: white;
-  background-color: #00ccff;
-  border-color: #00b8e6; }
+  background-color: #0099ff;
+  border-color: #008ae6; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
     color: white;
-    background-color: #00abd6;
-    border-color: #0087a8; }
+    background-color: #0081d6;
+    border-color: #0065a8; }
   .open .btn-primary.dropdown-toggle {
     color: white;
-    background-color: #00abd6;
-    border-color: #0087a8; }
+    background-color: #0081d6;
+    border-color: #0065a8; }
   .btn-primary:active, .btn-primary.active {
     background-image: none; }
   .open .btn-primary.dropdown-toggle {
     background-image: none; }
   .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
-    background-color: #00ccff;
-    border-color: #00b8e6; }
+    background-color: #0099ff;
+    border-color: #008ae6; }
 
 .btn-warning {
   color: #fff;
@@ -4371,10 +4371,10 @@ th.hidden-lg, td.hidden-lg {
     display: none !important; } }
 
 body {
-  background: #0099ff; }
+  background: #00ccff; }
 
 .login-form {
-  background-color: #0099ff;
+  background-color: #00ccff;
   padding-top: 100px; }
   .login-form .inner-container {
     width: 460px;
@@ -4399,7 +4399,7 @@ body {
       width: 100%; }
 
 .modal-header {
-  background-color: #00ccff;
+  background-color: #0099ff;
   color: white; }
 
 .overflow, .registration, .forgot-password {

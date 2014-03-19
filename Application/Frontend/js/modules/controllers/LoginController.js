@@ -4,13 +4,25 @@
 angular.module("TimeTable.Login")
     .controller('LoginCtrl',[
         '$scope',
-        '$state',
+        'navigation',
         'translation',
         '$modal',
-        function($scope,$state,loc,$modal){
+        'loginService',
+        function($scope,navigation,loc,$modal,loginService){
             loc.setTranslation($scope);
             $scope.username = '';
             $scope.password = '';
+
+            $scope.doLogin = function(){
+                loginService.login({
+                    username:$scope.username,
+                    password:$scope.password
+                }).then(function(auth){
+                        alert('It is ok!!!');
+                    },function(error){
+                        alert(error.message);
+                    })
+            };
 
             $scope.doForgotPassword = function(){
                 $modal.open({

@@ -4,19 +4,20 @@
 angular.module('TimeTable.Content')
     .controller('ContentCtrl',[
         '$scope',
-        '$state',
+        'navigation',
         '$timeout',
         'translation',
-        function($scope,$state,$timeout,loc){
+        'loginService',
+        function($scope,navigation,$timeout,loc,loginService){
             loc.setTranslation($scope);
-            //$timeout(function(){
-                //$state.transitionTo('1course',{},{inherit:true});
-            //},100);
+            if(!loginService.isAuthorized()){
+                navigation.stateNavigationTo('login',{},{location:'replace'});
+            }
 
             $scope.doClick = function(data){
                 switch (data){
-                    case 1: $state.transitionTo('1course',{},{}); break;
-                    case 2: $state.transitionTo('2course',{},{}); break;
+                    case 1: navigation.stateNavigationTo('1course',{},{}); break;
+                    case 2: navigation.stateNavigationTo('2course',{},{}); break;
                 }
             };
         }]);

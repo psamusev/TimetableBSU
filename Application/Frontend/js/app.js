@@ -57,21 +57,22 @@ angular.module('timetableBSU',[
     }])
     .run([
         'locStorage',
-        'translation',
         '$rootScope',
-        '$urlRouter',
-        '$location',
+        'navigation',
         'loginService',
-        function(storage,loc,$rootScope,$urlRouter,$location,loginService){
-             loc.create();
-             if(!storage.has('local')){
+        function(storage,$rootScope,navigation,loginService){
+            if(!storage.has('local')){
                 storage.set('local','en-us');
-             }
-            $rootScope.$on('$locationChangeSuccess', function(evt) {
+            }
+            $rootScope.$on('$locationChangeSuccess', function(evt,oldPath) {
                 evt.preventDefault();
-                if($location.path().indexOf('content') >= 0 && !loginService.isAuthorized()){
+                if(navigation.isEqualPath('content') && !loginService.isAuthorized()){
                     alert('You are not authorized');
-                    $location.path('/login').replace();
+                    navigation.navigateTo('/login');
+                } else if(navigation.isEqualPath('',oldPath)){
+                    navigation.navigateTo('login');
+                } else if(navigation.isEqualPath('/login') && loginService.isAuthorized()){
+                    navigation.navigateTo('/content/2course');
                 }
 
         });
@@ -81,7 +82,7 @@ angular.module('TimeTable.Login',['TimeTable.MainService','ui.bootstrap']);
 angular.module('TimeTable.MainService',[]);
 angular.module('TimeTable.Content',[
         'TimeTable.MainService',
-         'ui.router'
+        'TimeTable.Login'
     ]);
 angular.module('TimeTable.FirstCourse',['TimeTable.MainService']);
 angular.module('TimeTable.SecondCourse',['TimeTable.MainService']);
