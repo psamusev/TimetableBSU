@@ -5,7 +5,8 @@ var express = require('express'),
     http = require('http'),
     fs = require('fs'),
     url = require('url'),
-    util = require('util');
+    util = require('util'),
+    User = require('./Libs/User/User');
 
 var app = express();
 
@@ -32,5 +33,26 @@ app.get('*', function (req, res){
     res.sendfile(__dirname + '/Frontend/templates/404.html');
 });
 
-app.listen(8000);
+app.post('/login/authentication', function (req, res){
+    var username = 'test1';
 
+    res.writeHead(200, {'Content-Type': 'application/javascript'});
+    res.write(JSON.stringify({
+        "username": username,
+        "status": "AUTHORIZED"
+    }));
+
+    res.end();
+//    var password = 'password';
+//    User.addUser(username, password, function (err, user) {
+//        if(err){
+//            throw err;
+//        } else {
+//            res.writeHead(200, {'Content-Type': 'application/javascript'});
+//            res.write(JSON.stringify(user));
+//            res.end();
+//        }
+//    });
+});
+
+app.listen(8000);
