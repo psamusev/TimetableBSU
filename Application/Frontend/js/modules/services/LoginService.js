@@ -11,22 +11,24 @@ angular.module("TimeTable.Login")
                 $http({
                     url:'/login/authentication',
                     method:'POST',
-                    params:{
+                    headers:{
+                        Accept:'application/json'
+                    },
+                    data:{
                         username:credentials.username,
                         password:credentials.password
                     }
                 }).success(function(response){
                         alert('It is working!!!!!!');
+                        locStore.set('auth',response.username);
                         deffer.resolve(true);
                     }).error(function(response){
                         deffer.reject({
-                            message:response
+                            message:response.error
                         });
                     });
 
                 return deffer.promise;
-//                locStore.set('auth','user:password');
-//                return true;
             },
             logout:function(){
                 locStore.remove('auth');

@@ -42,6 +42,9 @@ angular.module('TimeTable.MainService')
                 },
                 has:function(key){
                     return(storage.getItem(key)) ? true : false;
+                },
+                remove:function(key){
+                    storage.removeItem(key);
                 }
             }
     })

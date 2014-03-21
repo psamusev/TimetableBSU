@@ -13,13 +13,7 @@ angular.module('timetableBSU')
         function($scope,$timeout,navigation,translation,storage,loginService,$modal){
             $scope.title = 'My title';
             $scope.registration = true;
-            //Can we use cache
-            /*if(loc.getTranslation()){
-                loc.setTranslation($scope);
-                $scope.ready = true;
-                $state.transitionTo('login',{},{});
-                console.log('cash');
-            } else{*/
+            // TODO: Can we use cache for loc.Translation()
             translation.create().then(function(data){
                 translation.set(data.d);
                 translation.setTranslation($scope);
@@ -31,12 +25,11 @@ angular.module('timetableBSU')
                 }
             });
 
-            //}
             $scope.doClick = function(data){
                 switch (data){
-                    case 1: $scope.registration = true; navigation.stateNavigationTo('login',{},{}); break;
+                    case 1: loginService.logout();/* $scope.registration = true;*/ navigation.stateNavigationTo('login',{},{}); break;
                     case 2: if(loginService.isAuthorized()){
-                                $scope.registration = false;
+                                /*$scope.registration = false;*/
                                 navigation.stateNavigationTo('1course',{},{});
                             } else {
                                 alert('You are not authorized');

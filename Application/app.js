@@ -14,6 +14,8 @@ app.configure(function (){
     app.set('title', 'Timetable BSU');
     app.use(express.logger());
     app.use(express.static(__dirname));
+    app.use(express.bodyParser());
+    app.use(express.errorHandler())
 });
 
 app.get('/', function (req, res){
@@ -34,13 +36,19 @@ app.get('*', function (req, res){
 });
 
 app.post('/login/authentication', function (req, res){
-    var username = 'test1';
+    var data = req.body;
+    var username = data.username;
+    var password = data.password;
 
-    res.writeHead(200, {'Content-Type': 'application/javascript'});
-    res.write(JSON.stringify({
-        "username": username,
-        "status": "AUTHORIZED"
-    }));
+
+    if(username === 'admin' && password === 'admin') {
+        res.json(200,{
+            username: username,
+            status: "AUTHORIZED"
+        });
+    } else{
+        res.json(500,{error:'This user doesn\'t exist'});
+    }
 
     res.end();
 //    var password = 'password';

@@ -18,7 +18,7 @@ angular.module("TimeTable.Login")
                     username:$scope.username,
                     password:$scope.password
                 }).then(function(auth){
-                        alert('It is ok!!!');
+                        navigation.stateNavigationTo('1course',{},{location:'replace'});
                     },function(error){
                         alert(error.message);
                     })
