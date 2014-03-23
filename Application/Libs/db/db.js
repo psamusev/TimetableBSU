@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     MONGO = {
-        username: "blackhard",
-        password: "MyPass12345",
+        username: "Admin",
+        password: "Admin",
         server: 'ds033069.mongolab.com',
         port: '33069',
         db: 'timetable_bsu',
@@ -23,9 +23,11 @@ var mongoose = require('mongoose'),
 
 module.exports.mongoose = mongoose;
 module.exports.Schema = Schema;
+module.exports.connect = connect;
+module.exports.disconnect = disconnect;
 
 function connect() {
-    mongoose.connect(MONGO.connectionString());
+   mongoose.connect(MONGO.connectionString());
 }
 
 function disconnect() {

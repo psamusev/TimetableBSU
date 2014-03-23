@@ -7,6 +7,7 @@ var express = require('express'),
     url = require('url'),
     util = require('util'),
     User = require('./Libs/User/User');
+    db = require('./Libs/db/db');
 
 var app = express();
 
@@ -37,30 +38,39 @@ app.get('*', function (req, res){
 
 app.post('/login/authentication', function (req, res){
     var data = req.body;
-    var username = data.username;
-    var password = data.password;
+    db.connect();
+
+    User.getUser({username:data.username,password:data.password},function(err,user){
+        db.disconnect();
+        if(err){
+            res.json(500,{error:err});
+        } else{
+           res.json(200,{
+               status:'Authorized',
+               username:data.username
+           });
+        }
+        res.end();
+    });
 
 
-    if(username === 'admin' && password === 'admin') {
-        res.json(200,{
-            username: username,
-            status: "AUTHORIZED"
-        });
-    } else{
-        res.json(500,{error:'This user doesn\'t exist'});
-    }
+});
 
-    res.end();
-//    var password = 'password';
-//    User.addUser(username, password, function (err, user) {
-//        if(err){
-//            throw err;
-//        } else {
-//            res.writeHead(200, {'Content-Type': 'application/javascript'});
-//            res.write(JSON.stringify(user));
-//            res.end();
-//        }
-//    });
+app.post('/login/registration',function(req,res){
+    var data = req.body;
+    db.connect();
+
+    User.addUser(data.user, function (err,user) {
+        db.disconnect();
+        if(err){
+            res.json(500,{error:err});
+        } else {
+            res.json(200,{
+                status: "Registration"
+            });
+        }
+        res.end();
+    });
 });
 
 app.listen(8000);

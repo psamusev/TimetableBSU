@@ -24,7 +24,7 @@ angular.module("TimeTable.Login")
                         deffer.resolve(true);
                     }).error(function(response){
                         deffer.reject({
-                            message:response.error
+                            message:response.error.message
                         });
                     });
 
@@ -37,7 +37,26 @@ angular.module("TimeTable.Login")
 
             },
             registration: function(newUser){
+                var deffer = $q.defer();
 
+                $http({
+                    url:'/login/registration',
+                    method:'POST',
+                    headers:{
+                        Accept:'application/json'
+                    },
+                    data:{user:newUser}
+                }).success(function(response){
+                    alert('Registration is OK!!!!!!');
+                    //locStore.set('auth',response.username);
+                    deffer.resolve(true);
+                }).error(function(response){
+                    deffer.reject({
+                        message:response.error.message
+                    });
+                });
+
+                return deffer.promise;
             },
             isAuthorized: function(){
                 return locStore.has('auth');

@@ -44,10 +44,11 @@ angular.module('timetableBSU')
             };
 
             $scope.doRegistration = function(){
-                $modal.open({
+                var registratonDialog = $modal.open({
                     templateUrl:'../Frontend/templates/modal/registration.html',
                     controller:function($scope,$modalInstance,$timeout){
                         translation.setTranslation($scope);
+                        $scope.credentials = null;
                         $scope.name = $scope.surname = $scope.email = $scope.password = $scope.confirmPassword = '';
                         $scope.error = false;
 
@@ -78,10 +79,18 @@ angular.module('timetableBSU')
                                 }
                             }
                             if(error.length === 0){
-                                loginService.registration(newUser);
-                                $timeout(function(){
-                                    $modalInstance.close();
-                                },0);
+                                var me = this;
+                                loginService.registration(newUser)
+                                    .then(function(){
+                                        $timeout(function(){
+                                            $modalInstance.close({username:me.username,password:me.password});
+                                        },0);
+                                    },function(error){
+                                        alert(error.message);
+                                    });
+
+
+
                             } else{
                                 $scope.error = true;
                                 for(var i = 0; i < error.length; i++){
@@ -104,8 +113,21 @@ angular.module('timetableBSU')
                             }
                         };
                     },
+//                    resolve:{
+//                        credentials:function(){
+//                            return $scope.credentials;
+//                        }
+//                    },
                     windowClass:'registration'
-                })
+                });
+
+                registratonDialog.result
+                    .then(function(credentials){
+                        $scope.$$childHead.username = credentials.username;
+                        $scope.$$childHead.password = credentials.password;
+                    },function(){
+                        var s = 5;
+                    });
             };
 
             $scope.radioModel = storage.get('local');
