@@ -47,7 +47,7 @@ app.post('/login/authentication', function (req, res){
         } else{
            res.json(200,{
                status:'Authorized',
-               username:data.username
+               authToken:user.get('id')
            });
         }
         res.end();

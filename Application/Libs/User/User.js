@@ -23,7 +23,7 @@ function addUser(user, callback){
     instance.surname = user.surname;
     instance.faculty = user.faculty;
     instance.group = user.group;
-    instance.email = user.email;
+    instance.email = user.email.toLowerCase();
     instance.username = user.username;
     instance.password = user.password;
 

@@ -20,7 +20,7 @@ angular.module("TimeTable.Login")
                     }
                 }).success(function(response){
                         alert('It is working!!!!!!');
-                        locStore.set('auth',response.username);
+                        locStore.set('auth',response.authToken);
                         deffer.resolve(true);
                     }).error(function(response){
                         deffer.reject({
@@ -48,7 +48,6 @@ angular.module("TimeTable.Login")
                     data:{user:newUser}
                 }).success(function(response){
                     alert('Registration is OK!!!!!!');
-                    //locStore.set('auth',response.username);
                     deffer.resolve(true);
                 }).error(function(response){
                     deffer.reject({
@@ -65,10 +64,11 @@ angular.module("TimeTable.Login")
                 var error = [];
                 if(value.name === ''){ error.push(0);}
                 if(value.surname === ''){ error.push(1);}
+                if(value.username === ''){error.push(4);}
                 if(value.password === ''){ error.push(5);}
                 if(value.confirmPassword !== value.password) {error.push(6);}
                 var regExp = /^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$/;
-                if(!regExp.test(value.email)){ error.push(7);}
+                if(!regExp.test(value.email.toLowerCase())){ error.push(7);}
 
                 return error;
             }

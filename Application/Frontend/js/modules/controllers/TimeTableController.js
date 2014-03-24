@@ -49,7 +49,7 @@ angular.module('timetableBSU')
                     controller:function($scope,$modalInstance,$timeout){
                         translation.setTranslation($scope);
                         $scope.credentials = null;
-                        $scope.name = $scope.surname = $scope.email = $scope.password = $scope.confirmPassword = '';
+                        $scope.name = $scope.surname = $scope.email = $scope.username = $scope.password = $scope.confirmPassword = '';
                         $scope.error = false;
 
                         $scope.groups = [1,2,3,4,5,6,7,8,9,10,11,12];
@@ -102,15 +102,6 @@ angular.module('timetableBSU')
                         };
                         $scope.cancel = function(){
                             $modalInstance.dismiss('cancel');
-                        };
-
-                        $scope.generateUsername = function(surname){
-                            if (surname === '') {
-                                this.username = '';
-                            } else {
-                                console.log(surname);
-                                this.username = this.faculty + '.' + surname.toLowerCase();
-                            }
                         };
                     },
 //                    resolve:{

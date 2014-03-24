@@ -22,6 +22,7 @@ angular.module('TimeTable.MainService')
                 me.data = location;
             };
             this.setTranslation = function($scope){
+                while(me.data[storage.get('local')] === undefined){}
                 $scope.translation = me.data[storage.get('local')];
             };
             /*this.getTranslation = function(){
