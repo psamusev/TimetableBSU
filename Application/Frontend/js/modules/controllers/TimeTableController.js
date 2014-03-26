@@ -50,9 +50,11 @@ angular.module('timetableBSU')
                         translation.setTranslation($scope);
                         $scope.credentials = null;
                         $scope.name = $scope.surname = $scope.email = $scope.username = $scope.password = $scope.confirmPassword = '';
-                        $scope.error = false;
+                        $scope.error = '';
 
                         $scope.groups = [1,2,3,4,5,6,7,8,9,10,11,12];
+                        $scope.courses = [1,2,3,4,5];
+                        $scope.course = $scope.courses[0];
                         $scope.group = $scope.groups[0];
                         $scope.faculty = 'fpm';
 
@@ -63,42 +65,23 @@ angular.module('timetableBSU')
                                 name: this.name,
                                 surname: this.surname,
                                 faculty: this.faculty,
+                                course:this.course,
                                 group: this.group,
                                 username: this.username,
                                 password: this.password,
                                 confirmPassword: this.confirmPassword,
                                 email: this.email
                             };
-                            $scope.error = false;
-                            var error = loginService.validateRegistrationData(newUser);
-                            var inputs = angular.element(document.querySelectorAll('.registration .form-group'));
+                            var me = this;
 
-                            for(var i = 0; i < inputs.length; i++){
-                                if(inputs[i].className.indexOf('has-error') >= 0){
-                                    inputs[i].className =  inputs[i].className.replace(' has-error','');
-                                }
-                            }
-                            if(error.length === 0){
-                                var me = this;
-                                loginService.registration(newUser)
-                                    .then(function(){
-                                        $timeout(function(){
-                                            $modalInstance.close({username:me.username,password:me.password});
-                                        },0);
-                                    },function(error){
-                                        alert(error.message);
-                                    });
-
-
-
-                            } else{
-                                $scope.error = true;
-                                for(var i = 0; i < error.length; i++){
-                                    inputs[error[i]].className += ' has-error';
-                                }
-                            }
-
-
+                            loginService.registration(newUser)
+                                .then(function(){
+                                    $timeout(function(){
+                                        $modalInstance.close({username:me.username,password:me.password});
+                                    },0);
+                                },function(error){
+                                    $scope.error = error.message;
+                                });
                         };
                         $scope.cancel = function(){
                             $modalInstance.dismiss('cancel');
@@ -117,7 +100,6 @@ angular.module('timetableBSU')
                         $scope.$$childHead.username = credentials.username;
                         $scope.$$childHead.password = credentials.password;
                     },function(){
-                        var s = 5;
                     });
             };
 

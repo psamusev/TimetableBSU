@@ -2,6 +2,28 @@
  * Created by Pavel on 1.3.14.
  */
 'use strict';
+if(!console.groupCollapsed){
+    console.groupCollapsed = function(msg){
+        console.log('{');
+        console.log(msg + ':');
+    }
+}
+
+if(!console.groupEnd){
+    console.groupEnd = function(){
+        console.log('}');
+    }
+}
+
+angular.module('TimeTable.Login',['TimeTable.MainService','ui.bootstrap']);
+angular.module('TimeTable.MainService',[]);
+angular.module('TimeTable.Content',[
+    'TimeTable.MainService',
+    'TimeTable.Login'
+]);
+angular.module('TimeTable.FirstCourse',['TimeTable.MainService']);
+angular.module('TimeTable.SecondCourse',['TimeTable.MainService']);
+
 angular.module('timetableBSU',[
         'ui.bootstrap',
         'ui.router',
@@ -54,7 +76,8 @@ angular.module('timetableBSU',[
                 });
 
             $urlRouterProvider.otherwise('/pageNotFound');
-    }])
+        }
+    ])
     .run([
         'locStorage',
         '$rootScope',
@@ -78,11 +101,3 @@ angular.module('timetableBSU',[
         });
 
     }]);
-angular.module('TimeTable.Login',['TimeTable.MainService','ui.bootstrap']);
-angular.module('TimeTable.MainService',[]);
-angular.module('TimeTable.Content',[
-        'TimeTable.MainService',
-        'TimeTable.Login'
-    ]);
-angular.module('TimeTable.FirstCourse',['TimeTable.MainService']);
-angular.module('TimeTable.SecondCourse',['TimeTable.MainService']);

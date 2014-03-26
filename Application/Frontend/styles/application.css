@@ -3202,7 +3202,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   border-color: #428bca; }
 
 .alert {
-  padding: 15px;
+  padding: 5px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px; }
@@ -3217,7 +3217,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     margin-top: 5px; }
 
 .alert-dismissable {
-  padding-right: 35px; }
+  padding-right: 25px; }
   .alert-dismissable .close {
     position: relative;
     top: -2px;
@@ -4405,18 +4405,24 @@ body {
 .overflow, .registration, .forgot-password {
   overflow-y: auto; }
 
-.has-error .control-label {
-  color: red; }
-.has-error .form-control {
-  border-color: red; }
-
 .registration .modal-dialog {
-  width: 500px; }
+  width: 700px; }
 .registration .modal-body {
   padding-bottom: 0; }
-  .registration .modal-body .form-group .control-label {
-    margin-right: 20px;
-    text-align: left; }
+  .registration .modal-body .form-group {
+    margin-bottom: 0;
+    height: 65px; }
+    .registration .modal-body .form-group .control-label {
+      margin-right: 20px;
+      text-align: left; }
+    .registration .modal-body .form-group .error {
+      clear: both;
+      position: relative;
+      top: -25px;
+      left: 145px;
+      width: 61%; }
+    .registration .modal-body .form-group .help-block {
+      margin-bottom: 0; }
 .registration .modal-footer {
   padding: 7px 20px 7px; }
 

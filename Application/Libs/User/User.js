@@ -4,6 +4,7 @@ var UserSchema = new db.Schema({
     name: String,
     surname: String,
     faculty: String,
+    course: Number,
     group: Number,
     username: {type: String, unique: true},
     password: String,
@@ -22,6 +23,7 @@ function addUser(user, callback){
     instance.name = user.name;
     instance.surname = user.surname;
     instance.faculty = user.faculty;
+    instance.course = user.course;
     instance.group = user.group;
     instance.email = user.email.toLowerCase();
     instance.username = user.username;

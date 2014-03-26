@@ -31,24 +31,23 @@ angular.module('TimeTable.MainService')
 
         }
     ])
-    .factory('locStorage',
+    .service('locStorage',[
         function(){
-            var storage = window.localStorage;
-            return{
-                set:function(key,value){
+            var storage = (typeof window.localStorage == 'unknown') ? window.sessionStorage : window.localStorage ;
+            this.set = function(key,value){
                     storage.setItem(key,value);
-                },
-                get:function(key){
-                    return storage.getItem(key);
-                },
-                has:function(key){
-                    return(storage.getItem(key)) ? true : false;
-                },
-                remove:function(key){
-                    storage.removeItem(key);
-                }
+            };
+            this.get = function(key){
+                return storage.getItem(key);
+            };
+            this.has = function(key){
+                return(storage.getItem(key)) ? true : false;
+            };
+            this.remove = function(key){
+                storage.removeItem(key);
             }
-    })
+        }
+    ])
     .factory('navigation',[
         '$location',
         '$state',

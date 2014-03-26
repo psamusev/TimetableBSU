@@ -2,64 +2,90 @@
     {{translation.registration}}
 </div>
 <div class="modal-body">
-    <div class="form-horizontal">
-        <div class="form-group">
-            <label class="col-sm-2 control-label">{{translation.nameLabel}}</label>
-            <div class="col-sm-8">
-                <input class="form-control" ng-model="name" type="text" placeholder="{{translation.nameLabel}}"/>
+    <form name="registration" class="form-horizontal registration-form" novalidate ng-submit="ok()">
+        <div class="form-group" data-ng-class="{'has-error':registration.firstName.$invalid}">
+            <label class="col-sm-2 control-label">{{translation.firstNameLabel}}{{registration.firstName.$error.valid}}</label>
+            <div class="col-sm-9">
+                <input class="form-control" ng-model="name" name="firstName" type="text" placeholder="{{translation.firstNameLabel}}" required=""/>
             </div>
+            <div style="clear: both; height: 25px">&nbsp;</div>
+            <span class="help-block error" ng-show="registration.firstName.$error.required">{{translation.firstNameRequired}}</span>
         </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">{{translation.surnameLabel}}</label>
-            <div class="col-sm-8">
-                <input class="form-control" ng-model="surname" type="text" placeholder="{{translation.surnameLabel}}"/>
+        <div class="form-group" data-ng-class="{'has-error':registration.lastName.$invalid}">
+            <label class="col-sm-2 control-label">{{translation.lastNameLabel}}</label>
+            <div class="col-sm-9">
+                <input class="form-control" ng-model="surname" name="lastName" type="text" placeholder="{{translation.lastNameLabel}}" required=""/>
             </div>
+            <div style="clear: both; height: 25px">&nbsp;</div>
+            <span class="help-block error" ng-show="registration.lastName.$error.required">{{translation.lastNameRequired}}</span>
         </div>
         <div class="selection">
             <div class="form-group">
                 <label class="col-sm-2 control-label">{{translation.facultyLabel}}</label>
-                <div class="col-sm-8">
+                <div class="col-sm-9">
                     <select class="form-control" ng-model="faculty">
                         <option>fpm</option>
                     </select>
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-sm-2 control-label">{{translation.courseLabel}}</label>
+                <div class="col-sm-9">
+                    <select class="form-control" ng-model="course" ng-options="c for c in courses">
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-sm-2 control-label">{{translation.groupLabel}}</label>
-                <div class="col-sm-8">
+                <div class="col-sm-9">
                     <select class="form-control" ng-model="group" ng-options="g for g in groups">
                     </select>
                 </div>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" style="margin-bottom: 15px" data-ng-class="{'has-error':registration.username.$invalid}">
             <label class="col-sm-2 control-label">{{translation.loginLabel}}</label>
-            <div class="col-sm-8">
-                <input class="form-control" ng-model="username" type="text" placeholder="{{translation.loginLabel}}"/>
+            <div class="col-sm-9">
+                <input class="form-control" ng-model="username" name="username" type="text"
+                       placeholder="{{translation.loginLabel}}" required="" ng-pattern="/^\w{6,15}$/"/>
             </div>
+            <div style="clear: both; height: 25px">&nbsp;</div>
+            <span class="help-block error" ng-show="registration.username.$error.required">{{translation.loginRequired}}</span>
+            <span class="help-block error" ng-show="registration.username.$error.pattern">{{translation.loginValid}}</span>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-ng-class="{'has-error':registration.password.$invalid}">
             <label class="col-sm-2 control-label">{{translation.passwordLabel}}</label>
-            <div class="col-sm-8">
-                <input class="form-control" ng-model="password" type="password" placeholder="{{translation.passwordLabel}}"/>
+            <div class="col-sm-9">
+                <input class="form-control" ng-model="password" name="password" type="password"
+                       placeholder="{{translation.passwordLabel}}" required ng-minlength="6"/>
             </div>
+            <div style="clear: both; height: 25px">&nbsp;</div>
+            <span class="help-block error" ng-show="registration.password.$error.required">{{translation.passwordRequired}}</span>
+            <span class="help-block error" ng-show="registration.password.$error.minlength">{{translation.passwordValidMinLength}}</span>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-ng-class="{'has-error':registration.confirmPassword.$invalid}">
             <label class="col-sm-2 control-label" style="padding-top:0px;">{{translation.confirmPassword}}</label>
-            <div class="col-sm-8">
-                <input class="form-control" ng-model="confirmPassword" type="password" placeholder="{{translation.confirmPassword}}"/>
+            <div class="col-sm-9">
+                <input class="form-control" ng-model="confirmPassword" name="confirmPassword" type="password"
+                       placeholder="{{translation.confirmPassword}}" required match="password"/>
             </div>
+            <div style="clear: both; height: 25px">&nbsp;</div>
+            <span class="help-block error" ng-show="registration.confirmPassword.$error.mismatch">{{translation.confirmPasswordValid}}</span>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-ng-class="{'has-error':registration.email.$invalid}">
             <label class="col-sm-2 control-label">{{translation.emailLabel}}</label>
-            <div class="col-sm-8">
-                <input class="form-control" ng-model="email" type="text" placeholder="{{translation.emailLabel}}"/>
+            <div class="col-sm-9">
+                <input class="form-control" ng-model="email" name="email" type="email"
+                       placeholder="{{translation.emailLabel}}" required ng-pattern="/^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$/"/>
             </div>
+            <div style="clear: both; height: 25px">&nbsp;</div>
+            <span class="help-block error" ng-show="registration.email.$error.required">{{translation.emailRequired}}</span>
+            <span class="help-block error" ng-show="registration.email.$error.pattern">{{translation.emailValid}}</span>
         </div>
-        <div class="alert alert-danger" ng-show="error === true">{{translation.registrationError}}</div>
-    </div>
+        <div class="alert alert-danger" ng-hide="error == ''"></div>
+    </form>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="ok()">{{translation.registration}}</button>
+    <button class="btn btn-primary" ng-disabled="registration.$invalid" ng-click="ok()">{{translation.registration}}</button>
     <button class="btn btn-warning" ng-click="cancel()">{{translation.cancel}}</button>
 </div>

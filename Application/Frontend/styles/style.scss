@@ -5,6 +5,7 @@ $btn-primary-color:white;
 $modal-title-padding:2px;
 $modal-footer-padding: 7px 20px 7px;
 $input-has-error: red;
+$alert-padding: 5px;
 $icon-font-path: '../styles/bootstrap-sass/fonts/';
 @import "bootstrap-sass/lib/bootstrap";
 
@@ -52,26 +53,39 @@ body{
   overflow-y: auto;
 }
 
-.has-error{
-  .control-label{
-    color: $input-has-error;
-  }
-  .form-control{
-    border-color: $input-has-error;
-  }
-}
+//.has-error{
+//  .control-label{
+//    color: $input-has-error;
+//  }
+//  .form-control{
+//    border-color: $input-has-error;
+//  }
+//}
 
 .registration{
   @extend .overflow;
   .modal-dialog{
-    width: 500px;
+    width: 700px;
   }
   .modal-body{
     padding-bottom: 0;
     .form-group{
+      margin-bottom: 0;
+      height: 65px;
       .control-label{
         margin-right: 20px;
         text-align: left;
+      }
+      .error{
+        clear: both;
+        position: relative;
+        top:-25px;
+        left:145px;
+        width: 61%;
+      }
+
+      .help-block{
+        margin-bottom: 0;
       }
     }
   }
