@@ -4414,7 +4414,10 @@ body {
     height: 65px; }
     .registration .modal-body .form-group .control-label {
       margin-right: 20px;
-      text-align: left; }
+      text-align: left;
+      width: 16%; }
+    .registration .modal-body .form-group .col-sm-9 {
+      width: 75%; }
     .registration .modal-body .form-group .error {
       clear: both;
       position: relative;

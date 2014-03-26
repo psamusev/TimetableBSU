@@ -4,16 +4,16 @@
 <div class="modal-body">
     <form name="registration" class="form-horizontal registration-form" novalidate ng-submit="ok()">
         <div class="form-group" data-ng-class="{'has-error':registration.firstName.$invalid}">
-            <label class="col-sm-2 control-label">{{translation.firstNameLabel}}{{registration.firstName.$error.valid}}</label>
-            <div class="col-sm-9">
+            <label class="col-sm-2 control-label pull-left">{{translation.firstNameLabel}}{{registration.firstName.$error.valid}}</label>
+            <div class="pull-left col-sm-9">
                 <input class="form-control" ng-model="name" name="firstName" type="text" placeholder="{{translation.firstNameLabel}}" required=""/>
             </div>
             <div style="clear: both; height: 25px">&nbsp;</div>
             <span class="help-block error" ng-show="registration.firstName.$error.required">{{translation.firstNameRequired}}</span>
         </div>
         <div class="form-group" data-ng-class="{'has-error':registration.lastName.$invalid}">
-            <label class="col-sm-2 control-label">{{translation.lastNameLabel}}</label>
-            <div class="col-sm-9">
+            <label class="col-sm-2 control-label pull-left">{{translation.lastNameLabel}}</label>
+            <div class="pull-left col-sm-9">
                 <input class="form-control" ng-model="surname" name="lastName" type="text" placeholder="{{translation.lastNameLabel}}" required=""/>
             </div>
             <div style="clear: both; height: 25px">&nbsp;</div>
@@ -21,31 +21,31 @@
         </div>
         <div class="selection">
             <div class="form-group">
-                <label class="col-sm-2 control-label">{{translation.facultyLabel}}</label>
-                <div class="col-sm-9">
+                <label class="col-sm-2 control-label pull-left">{{translation.facultyLabel}}</label>
+                <div class="col-sm-9 pull-left">
                     <select class="form-control" ng-model="faculty">
                         <option>fpm</option>
                     </select>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">{{translation.courseLabel}}</label>
-                <div class="col-sm-9">
+                <label class="col-sm-2 control-label pull-left">{{translation.courseLabel}}</label>
+                <div class="col-sm-9 pull-left">
                     <select class="form-control" ng-model="course" ng-options="c for c in courses">
                     </select>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">{{translation.groupLabel}}</label>
-                <div class="col-sm-9">
+                <label class="col-sm-2 control-label pull-left">{{translation.groupLabel}}</label>
+                <div class="col-sm-9 pull-left">
                     <select class="form-control" ng-model="group" ng-options="g for g in groups">
                     </select>
                 </div>
             </div>
         </div>
         <div class="form-group" style="margin-bottom: 15px" data-ng-class="{'has-error':registration.username.$invalid}">
-            <label class="col-sm-2 control-label">{{translation.loginLabel}}</label>
-            <div class="col-sm-9">
+            <label class="col-sm-2 control-label pull-left">{{translation.loginLabel}}</label>
+            <div class="col-sm-9 pull-left">
                 <input class="form-control" ng-model="username" name="username" type="text"
                        placeholder="{{translation.loginLabel}}" required="" ng-pattern="/^\w{6,15}$/"/>
             </div>
@@ -54,8 +54,8 @@
             <span class="help-block error" ng-show="registration.username.$error.pattern">{{translation.loginValid}}</span>
         </div>
         <div class="form-group" data-ng-class="{'has-error':registration.password.$invalid}">
-            <label class="col-sm-2 control-label">{{translation.passwordLabel}}</label>
-            <div class="col-sm-9">
+            <label class="col-sm-2 control-label pull-left">{{translation.passwordLabel}}</label>
+            <div class="col-sm-9 pull-left">
                 <input class="form-control" ng-model="password" name="password" type="password"
                        placeholder="{{translation.passwordLabel}}" required ng-minlength="6"/>
             </div>
@@ -64,8 +64,8 @@
             <span class="help-block error" ng-show="registration.password.$error.minlength">{{translation.passwordValidMinLength}}</span>
         </div>
         <div class="form-group" data-ng-class="{'has-error':registration.confirmPassword.$invalid}">
-            <label class="col-sm-2 control-label" style="padding-top:0px;">{{translation.confirmPassword}}</label>
-            <div class="col-sm-9">
+            <label class="col-sm-2 control-label pull-left" style="padding-top:0px;">{{translation.confirmPassword}}</label>
+            <div class="col-sm-9 pull-left">
                 <input class="form-control" ng-model="confirmPassword" name="confirmPassword" type="password"
                        placeholder="{{translation.confirmPassword}}" required match="password"/>
             </div>
@@ -73,8 +73,8 @@
             <span class="help-block error" ng-show="registration.confirmPassword.$error.mismatch">{{translation.confirmPasswordValid}}</span>
         </div>
         <div class="form-group" data-ng-class="{'has-error':registration.email.$invalid}">
-            <label class="col-sm-2 control-label">{{translation.emailLabel}}</label>
-            <div class="col-sm-9">
+            <label class="col-sm-2 control-label pull-left">{{translation.emailLabel}}</label>
+            <div class="col-sm-9 pull-left">
                 <input class="form-control" ng-model="email" name="email" type="email"
                        placeholder="{{translation.emailLabel}}" required ng-pattern="/^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$/"/>
             </div>
