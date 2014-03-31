@@ -10,17 +10,12 @@
     "jade": ">= 0.0.1",
     "mongoose": ">= 2.6.5",
     "util": "0.10.x",
-    "url": "0.7.x",
-    "grunt": "~0.4.2",
-    "grunt-contrib-jshint": "~0.6.3",
-    "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt-contrib-uglify": "~0.2.2"
+    "url": "0.7.x"
   },
   "engine": "0.10.x",
   "main": "app.js",
   "devDependencies": {
-    "grunt": "~0.4.3",
-    "grunt-sass": "~0.11.0",
-    "grunt-contrib-watch": "~0.5.3"
+    "gulp": "~3.6.0",
+    "gulp-sass": "~0.7.1"
   }
 }
