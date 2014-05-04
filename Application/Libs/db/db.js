@@ -2,9 +2,9 @@ var mongoose = require('mongoose'),
     MONGO = {
         username: "Admin",
         password: "Admin",
-        server: 'ds033069.mongolab.com',
-        port: '33069',
-        db: 'timetable_bsu',
+        server: 'ds037498.mongolab.com',
+        port: '37498',
+        db: 'timetablebsu',
         connectionString: function () {
             return 'mongodb://' + this.username + ':' + this.password + '@' + this.server + ':' + this.port + '/' + this.db;
         },

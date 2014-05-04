@@ -46,8 +46,8 @@
         <div class="form-group" style="margin-bottom: 15px" data-ng-class="{'has-error':registration.username.$invalid}">
             <label class="col-sm-2 control-label pull-left">{{translation.loginLabel}}</label>
             <div class="col-sm-9 pull-left">
-                <input class="form-control" ng-model="username" name="username" type="text"
-                       placeholder="{{translation.loginLabel}}" required="" ng-pattern="/^\w{6,15}$/"/>
+                <input class="form-control" ng-model="username" name="username" type="email"
+                       placeholder="{{translation.loginLabel}}" required ng-pattern="/^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$/"/>
             </div>
             <div style="clear: both; height: 25px">&nbsp;</div>
             <span class="help-block error" ng-show="registration.username.$error.required">{{translation.loginRequired}}</span>
@@ -72,7 +72,7 @@
             <div style="clear: both; height: 25px">&nbsp;</div>
             <span class="help-block error" ng-show="registration.confirmPassword.$error.mismatch">{{translation.confirmPasswordValid}}</span>
         </div>
-        <div class="form-group" data-ng-class="{'has-error':registration.email.$invalid}">
+        <!--<div class="form-group" data-ng-class="{'has-error':registration.email.$invalid}">
             <label class="col-sm-2 control-label pull-left">{{translation.emailLabel}}</label>
             <div class="col-sm-9 pull-left">
                 <input class="form-control" ng-model="email" name="email" type="email"
@@ -81,8 +81,8 @@
             <div style="clear: both; height: 25px">&nbsp;</div>
             <span class="help-block error" ng-show="registration.email.$error.required">{{translation.emailRequired}}</span>
             <span class="help-block error" ng-show="registration.email.$error.pattern">{{translation.emailValid}}</span>
-        </div>
-        <div class="alert alert-danger" ng-hide="error == ''"></div>
+        </div>-->
+        <div class="alert alert-danger" ng-hide="error == ''">{{error}}</div>
     </form>
 </div>
 <div class="modal-footer">

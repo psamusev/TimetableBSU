@@ -2,12 +2,12 @@
  * Created by AA on 26.02.14.
  */
 var express = require('express'),
-    http = require('http'),
-    fs = require('fs'),
-    url = require('url'),
-    util = require('util'),
-    User = require('./Libs/User/User');
-    db = require('./Libs/db/db');
+    /*http = require('http'),
+ fs = require('fs'),
+ url = require('url'),
+ util = require('util'),*/
+
+    routes = require('./routes/routes');
 
 var app = express();
 
@@ -19,58 +19,6 @@ app.configure(function (){
     app.use(express.errorHandler())
 });
 
-app.get('/', function (req, res){
-    res.sendfile(__dirname + '/Frontend/index.html');
-});
-
-app.get('/index.html', function (req, res){
-    res.sendfile(__dirname + '/Frontend/index.html');
-});
-
-app.get('/Frontend/*', function (req, res){
-   res.writeHead(200, {'Context-Type': 'text/html'});
-   res.end();
-});
-
-app.get('*', function (req, res){
-    res.sendfile(__dirname + '/Frontend/templates/404.html');
-});
-
-app.post('/login/authentication', function (req, res){
-    var data = req.body;
-    db.connect();
-
-    User.getUser({username:data.username,password:data.password},function(err,user){
-        db.disconnect();
-        if(err){
-            res.json(500,{error:err});
-        } else{
-           res.json(200,{
-               status:'Authorized',
-               authToken:user.get('id')
-           });
-        }
-        res.end();
-    });
-
-
-});
-
-app.post('/login/registration',function(req,res){
-    var data = req.body;
-    db.connect();
-
-    User.addUser(data.user, function (err,user) {
-        db.disconnect();
-        if(err){
-            res.json(500,{error:err});
-        } else {
-            res.json(200,{
-                status: "Registration"
-            });
-        }
-        res.end();
-    });
-});
+routes.attachRequests(app);
 
 app.listen(8000);

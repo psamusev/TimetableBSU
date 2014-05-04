@@ -12,7 +12,7 @@ angular.module('timetableBSU')
         '$modal',
         function($scope,$timeout,navigation,translation,storage,loginService,$modal){
             $scope.title = 'My title';
-            $scope.registration = true;
+            $scope.registActive = true;
             // TODO: Can we use cache for loc.Translation()
             translation.create().then(function(data){
                 translation.set(data.d);
@@ -25,18 +25,6 @@ angular.module('timetableBSU')
                 }
             });
 
-            $scope.doClick = function(data){
-                switch (data){
-                    case 1: loginService.logout();/* $scope.registration = true;*/ navigation.stateNavigationTo('login',{},{}); break;
-                    case 2: if(loginService.isAuthorized()){
-                                /*$scope.registration = false;*/
-                                navigation.stateNavigationTo('1course',{},{});
-                            } else {
-                                alert('You are not authorized');
-                            } break;
-                }
-            };
-
             $scope.changeLocale = function(lang){
                 storage.set('local',lang);
                 translation.setTranslation($scope);
@@ -44,12 +32,12 @@ angular.module('timetableBSU')
             };
 
             $scope.doRegistration = function(){
-                var registratonDialog = $modal.open({
+                var registrationDialog = $modal.open({
                     templateUrl:'../Frontend/templates/modal/registration.html',
                     controller:function($scope,$modalInstance,$timeout){
                         translation.setTranslation($scope);
                         $scope.credentials = null;
-                        $scope.name = $scope.surname = $scope.email = $scope.username = $scope.password = $scope.confirmPassword = '';
+                        $scope.name = $scope.surname = /*$scope.email =*/ $scope.username = $scope.password = $scope.confirmPassword = '';
                         $scope.error = '';
 
                         $scope.groups = [1,2,3,4,5,6,7,8,9,10,11,12];
@@ -69,8 +57,8 @@ angular.module('timetableBSU')
                                 group: this.group,
                                 username: this.username,
                                 password: this.password,
-                                confirmPassword: this.confirmPassword,
-                                email: this.email
+                                confirmPassword: this.confirmPassword//,
+                                /*email: this.email*/
                             };
                             var me = this;
 
@@ -87,15 +75,10 @@ angular.module('timetableBSU')
                             $modalInstance.dismiss('cancel');
                         };
                     },
-//                    resolve:{
-//                        credentials:function(){
-//                            return $scope.credentials;
-//                        }
-//                    },
                     windowClass:'registration'
                 });
 
-                registratonDialog.result
+                registrationDialog.result
                     .then(function(credentials){
                         $scope.$$childHead.username = credentials.username;
                         $scope.$$childHead.password = credentials.password;

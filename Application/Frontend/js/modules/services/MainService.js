@@ -51,7 +51,8 @@ angular.module('TimeTable.MainService')
     .factory('navigation',[
         '$location',
         '$state',
-        function($location,$state){
+        '$stateParams',
+        function($location,$state,$stateParams){
             return{
                 navigateTo:function(path){
                     console.groupCollapsed('Location navigation');
@@ -77,6 +78,12 @@ angular.module('TimeTable.MainService')
                 },
                 reloadState:function(){
                     $state.transitionTo($state.current.name,{},{reload:true,location:'replace'});
+                },
+                getStateParams:function(){
+                    return $stateParams;
+                },
+                go:function(state){
+                    $state.go(state);
                 }
             }
         }

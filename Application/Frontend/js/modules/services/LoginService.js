@@ -34,7 +34,25 @@ angular.module("TimeTable.Login")
                 locStore.remove('auth');
             },
             remindPassword:function(email){
+                var deffer = $q.defer();
+                $http({
+                    url:'/forgotpassword',
+                    method:'GET',
+                    headers:{
+                        Accept:'application/json'
+                    },
+                    params:{
+                        email:email
+                    }
+                }).success(function(response){
+                    deffer.resolve(true);
+                }).error(function(response){
+                    deffer.reject({
+                        message:response.error.message
+                    });
+                });
 
+                return deffer.promise;
             },
             registration: function(newUser){
                 var deffer = $q.defer();
@@ -46,7 +64,7 @@ angular.module("TimeTable.Login")
                         Accept:'application/json'
                     },
                     data:{user:newUser}
-                }).success(function(response){
+                }).success(function(){
                     alert('Registration is OK!!!!!!');
                     deffer.resolve(true);
                 }).error(function(response){
@@ -59,7 +77,7 @@ angular.module("TimeTable.Login")
             },
             isAuthorized: function(){
                 return locStore.has('auth');
-            },
+            }/*,
             validateRegistrationData:function(value){
                 var error = [];
                 if(value.name === ''){ error.push(0);}
@@ -71,6 +89,6 @@ angular.module("TimeTable.Login")
                 if(!regExp.test(value.email.toLowerCase())){ error.push(7);}
 
                 return error;
-            }
+            }*/
         };
     }]);

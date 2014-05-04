@@ -21,8 +21,6 @@ angular.module('TimeTable.Content',[
     'TimeTable.MainService',
     'TimeTable.Login'
 ]);
-angular.module('TimeTable.FirstCourse',['TimeTable.MainService']);
-angular.module('TimeTable.SecondCourse',['TimeTable.MainService']);
 
 angular.module('timetableBSU',[
         'ui.bootstrap',
@@ -30,9 +28,7 @@ angular.module('timetableBSU',[
         'ngRoute',
         'TimeTable.MainService',
         'TimeTable.Login',
-        'TimeTable.Content',
-        'TimeTable.FirstCourse',
-        'TimeTable.SecondCourse'
+        'TimeTable.Content'
     ])
     .config([
         '$stateProvider',
@@ -50,24 +46,9 @@ angular.module('timetableBSU',[
                 })
                 .state({
                     name:'content',
-                    url:'/content',
+                    url:'/content/{c}',
                     templateUrl:'../Frontend/templates/content.html',
-                    controller:'ContentCtrl',
-                    abstract:true
-                })
-                .state({
-                    name:'1course',
-                    url:'/1course',
-                    parent:'content',
-                    template:'<p>{{translation.test1}}</p>',
-                    controller:'FirstCourseCtrl'
-                })
-                .state({
-                    name:'2course',
-                    url:'/2course',
-                    parent:'content',
-                    template:'<p>{{translation.test2}}</p>',
-                    controller:'SecondCourseCtrl'
+                    controller:'ContentCtrl'
                 })
                 .state({
                     name:'pageNotFound',

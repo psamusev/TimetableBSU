@@ -1,8 +1,12 @@
 <div>
     <p>{{translation.contentText}}</p>
+    <div class="pull-right">
+        <button class="btn btn btn-primary" ng-click="logout();">Exit</button>
+    </div>
     <div class="btn-group">
-        <button class="btn btn-primary" ng-click="doClick(1)">{{translation.firstCourse}}</button>
-        <button class="btn btn-info" ng-click="doClick(2)">{{translation.secondCourse}}</button>
+        <button class="btn btn-primary" ng-click="doClick(1)" ng-show="course == 2">{{translation.firstCourse}}</button>
+        <button class="btn btn-info" ng-click="doClick(2)" ng-show="course == 1">{{translation.secondCourse}}</button>
+        <button class="btn btn-danger" ng-click="getSchedule()">Get schedule</button>
     </div>
     <div ui-view></div>
 </div>

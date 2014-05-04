@@ -1,12 +1,16 @@
-$primary-color: rgb(0,204,255);//rgb(0,255,204);
+/*$primary-color: rgb(0,204,255);
+$btn-primary-bg: rgb(0,153,255);*/
+
+$primary-color: rgb(0,255,204);
+$btn-primary-bg: rgb(0,204,153);
+
 $background-color:white;
-$btn-primary-bg: rgb(0,153,255);//rgb(0,204,153);
 $btn-primary-color:white;
 $modal-title-padding:2px;
 $modal-footer-padding: 7px 20px 7px;
 $input-has-error: red;
 $alert-padding: 5px;
-$icon-font-path: '../styles/bootstrap-sass/fonts/';
+$icon-font-path: '../../styles/bootstrap-sass/fonts/';
 @import "bootstrap-sass/lib/bootstrap";
 
 body{
@@ -52,15 +56,6 @@ body{
 .overflow{
   overflow-y: auto;
 }
-
-//.has-error{
-//  .control-label{
-//    color: $input-has-error;
-//  }
-//  .form-control{
-//    border-color: $input-has-error;
-//  }
-//}
 
 .registration{
   @extend .overflow;

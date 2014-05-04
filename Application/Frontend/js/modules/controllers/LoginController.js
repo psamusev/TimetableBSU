@@ -10,15 +10,17 @@ angular.module("TimeTable.Login")
         'loginService',
         function($scope,navigation,loc,$modal,loginService){
             loc.setTranslation($scope);
+            $scope.$parent.registActive = true;
             $scope.username = '';
             $scope.password = '';
+
 
             $scope.doLogin = function(){
                 loginService.login({
                     username:$scope.username,
                     password:$scope.password
-                }).then(function(auth){
-                        navigation.stateNavigationTo('1course',{},{location:'replace'});
+                }).then(function(){
+                        navigation.stateNavigationTo('content',{c:'firstCourse'},{location:'replace'});
                     },function(error){
                         alert(error.message);
                     })
@@ -29,9 +31,15 @@ angular.module("TimeTable.Login")
                     templateUrl:'../Frontend/templates/modal/forgotPassword.html',
                     controller:function($scope,$modalInstance){
                         loc.setTranslation($scope);
-
+                        $scope.email = '';
+                        $scope.error = '';
                         $scope.ok = function(){
-                            $modalInstance.dismiss('ok');
+                            loginService.remindPassword(this.email)
+                                .then(function(){
+                                    $modalInstance.dismiss('ok');
+                                },function(error){
+                                    $scope.error = error.message;
+                                });
                         };
                         $scope.cancel = function(){
                             $modalInstance.dismiss('cancel');
