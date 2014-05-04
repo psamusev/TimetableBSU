@@ -57,7 +57,7 @@ function getUserByUsername(email,callback){
         },
         function(err,user){
             if(user){
-                callback.success();
+                callback.success(user);
             } else{
                 callback.error({message:'User with that email does not exist'});
             }

@@ -1,5 +1,7 @@
 var User = require('./../models/User/User'),
-    db = require('./../Libs/db/db');
+    db = require('./../Libs/db/db'),
+    emailSend = require('./../Libs/email/email');
+
 
 module.exports = function handleTo(server){
 
@@ -8,10 +10,28 @@ module.exports = function handleTo(server){
         db.connect();
 
         User.getUserByUsername(email,{
-            success:function(){
+            success:function(user){
                 db.disconnect();
-                res.send(200);
-                res.end();
+
+                var mailOptions = {
+                    from: "timetablebsu@gmail.com", // sender address
+                    to: email, // list of receivers
+                    subject: "Remind Password", // Subject line
+                    html: "<b>Your password: " + user.get('password') + "<b>" // html body
+                };
+                emailSend.smtpTransport.sendMail(mailOptions, function(error, response){
+                    if(error){
+                        console.log(error);
+                        res.json(500,{error:error});
+                        res.end();
+                    }else{
+                        console.log("Message sent: " + response.message);
+                        res.send(200);
+                        res.end();
+                    }
+                    emailSend.smtpTransport.close();
+                });
+
             },
             error:function(err){
                 db.disconnect();
